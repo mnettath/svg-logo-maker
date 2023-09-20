@@ -2,6 +2,7 @@
 
 const inquirer = require("inquirer");
 const fs = require("fs"); // includes the Node.js build in file system module in your JS code
+const generateShapes = require("./lib/shapes");
 
 inquirer
   .prompt([
@@ -45,13 +46,8 @@ inquirer
   .then((data) => {
     console.log(data);
 
-    const svg = `<svg width="100" height="100">
-    <rect width="100" height="100" fill="${data.shapeColor}" />
-    <text x="10" y="50" fill="${data.textColor}">${data.text}</text>
-  </svg>`;
-
+    const svg = generateShapes(data);
     // after all prompts are taken care of there needs to be a new svg file created named logo.svg
-
     fs.writeFile("./examples/logo.svg", svg, (error) => {
       if (error) {
         console.log(error);
