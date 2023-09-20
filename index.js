@@ -47,6 +47,7 @@ inquirer
     console.log(data);
 
     const svg = generateShapes(data);
+
     // after all prompts are taken care of there needs to be a new svg file created named logo.svg
     fs.writeFile("./examples/logo.svg", svg, (error) => {
       if (error) {
