@@ -1,5 +1,4 @@
-<svg width="200" height="250" version="1.1" xmlns="http://www.w3.org/2000/svg">
-    <polygon points= "100, 30, 30, 170, 170, 170" fill=white stroke-width="5">
-    <text x="10" y="10" color=green>mgn</text>
-    </polygon>
+<svg width="300" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <polygon points= "100, 30, 30, 170, 170, 170" fill="green" stroke-width="5"/>
+    <text x="100" y="150" fill="white" font-size="40" text-anchor="middle" alignment-baseline="middle">SVG</text>
     </svg>
