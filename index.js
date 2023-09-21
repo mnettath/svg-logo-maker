@@ -47,7 +47,39 @@ inquirer
   .then((data) => {
     console.log(data);
 
+    // Creating an instance of the SVG class
     const svgCanvas = new SVG();
+
+    switch (data.shape) {
+      case "Circle":
+        // create a new Circle
+        const circle = new Circle();
+        // set the color
+        circle.setColor(data.shapeColor);
+        // goes into the svg.js
+        svgCanvas.renderShape(circle);
+        break;
+      case "Triangle":
+        // create a new Circle
+        const triangle = new Triangle();
+        // set the color
+        triangle.setColor(data.shapeColor);
+        // goes into the svg.js
+        svgCanvas.renderShape(triangle);
+        break;
+      case "Square":
+        // create a new Circle
+        const square = new Square();
+        // set the color
+        square.setColor(data.shapeColor);
+        // goes into the svg.js
+        svgCanvas.renderShape(square);
+        break;
+    }
+
+    svgCanvas.renderText(data.text, data.textColor);
+
+    const svg = svgCanvas.render();
 
     // after all prompts are taken care of there needs to be a new svg file created named logo.svg
     fs.writeFile("./examples/logo.svg", svg, (error) => {

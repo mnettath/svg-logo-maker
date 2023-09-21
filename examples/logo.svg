@@ -1,4 +1,13 @@
 <svg width="300" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg">
-        <polygon points= "100, 30, 30, 170, 170, 170" fill="black" stroke-width="5"/>
-        <text x="100" y="150" fill="purple" font-size="40" text-anchor="middle" alignment-baseline="middle">BRB</text>
-      </svg>
+    <circle cx="150" cy="100" r="100" fill="green" stroke-width="5"/>
+    <text
+          x="150"
+          y="110"
+          fill="white"
+          font-size="80"
+          text-anchor="middle"
+          alignment-baseline="middle"
+        >
+          MGN
+        </text>
+    </svg>
