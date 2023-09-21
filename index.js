@@ -10,13 +10,13 @@ inquirer
     {
       // prompt for text where user can enter 3 characters
       type: "input",
-      message: "Please enter 3 characters for your logo",
+      message: "Please enter up to 3 characters for your logo",
       name: "text",
       validate: function (input) {
-        if (input.length === 3) {
+        if (input.length >= 1 && input.length <= 3) {
           return true;
         } else {
-          return "Please enter exactly 3 characters.";
+          return "Please enter up to 3 characters.";
         }
       },
     },
