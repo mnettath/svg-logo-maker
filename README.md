@@ -11,7 +11,7 @@ Provide a short description explaining the what, why, and how of your project. U
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+In order to use the SVG-Logo Maker, the user must install node.js. Node.js can be installed using this link: https://nodejs.org/en/download. It's important to download the LTS option for the computer's operating system. Next, the user will need to install the inquirer package by inputting "npm i inquirer@8.2.4" in the command line. Finally, the user needs to install jest for running the tests. Jest can be installed by running "npm install --save-dev jest" in the command line. Please make sure that test is set to "jest" in the package.json. More information about jest can be found here: https://jestjs.io/docs/getting-started. After completing these steps, the user will be ready to use the SVG-Logo Maker.
 
 ## Usage
 
