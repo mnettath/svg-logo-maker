@@ -8,7 +8,6 @@ const SVG = require("./lib/svg"); // imports SVG class from svg.js
 inquirer
   .prompt([
     {
-      // prompt for text where user can enter 3 characters
       type: "input",
       message: "Please enter up to 3 characters for your logo",
       name: "text",
@@ -26,7 +25,31 @@ inquirer
       message:
         "To set the text color, please enter a color keyword OR hexadecimal number",
       name: "textColor",
-      // TO DO: validation for if they do not type in a valid color keyword OR hexadecimal number
+      validate: function (input) {
+        const validColorKeywords = [
+          "red",
+          "green",
+          "blue",
+          "yellow",
+          "orange",
+          "purple",
+          "pink",
+          "black",
+          "gray",
+          "white",
+        ];
+
+        const hexColorRegex = /^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/;
+
+        if (
+          validColorKeywords.includes(input.toLowerCase()) ||
+          hexColorRegex.test(input)
+        ) {
+          return true;
+        } else {
+          return "Please enter a valid color keyword or hexadecimal color code";
+        }
+      },
     },
     {
       // prompt where user can select from a list of shapes: circle, triangle and square
@@ -41,7 +64,31 @@ inquirer
       message:
         "To set the shape color, please enter a color keyword OR hexadecimal number",
       name: "shapeColor",
-      // TO DO: validation for if they do not type in a valid color keyword OR hexadecimal number
+      validate: function (input) {
+        const validColorKeywords = [
+          "red",
+          "green",
+          "blue",
+          "yellow",
+          "orange",
+          "purple",
+          "pink",
+          "black",
+          "gray",
+          "white",
+        ];
+
+        const hexColorRegex = /^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/;
+
+        if (
+          validColorKeywords.includes(input.toLowerCase()) ||
+          hexColorRegex.test(input)
+        ) {
+          return true;
+        } else {
+          return "Please enter a valid color keyword or hexadecimal color code";
+        }
+      },
     },
   ])
   .then((data) => {
