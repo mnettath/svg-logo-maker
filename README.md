@@ -10,7 +10,7 @@ In order to use the SVG-Logo Maker, the user must install node.js. Node.js can b
 
 ## Usage
 
-Please see the following usage demonstration:
+Please see the following usage demonstration: https://drive.google.com/file/d/1btNeO1LFhpLtSzNEHdc_a-ktJyU-cne3/view
 
 ## Credits
 
